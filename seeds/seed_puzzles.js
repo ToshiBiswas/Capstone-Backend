@@ -16,7 +16,7 @@ exports.seed = async function(knex) {
     let batch = [];
 
     // Update the file path to where your CSV is located
-    const stream = fs.createReadStream('path/to/your/puzzles.csv')
+    const stream = fs.createReadStream('../sourceFiles/')
       .pipe(csv());
 
     stream.on('data', (data) => {

@@ -1,8 +1,7 @@
 import express from "express";
 import "dotenv/config";
 import cors from "cors";
-import warehousesRoutes from "./routes/warehouses-routes.js";
-import inventoriesRoutes from "./routes/inventories-routes.js";
+import router from "./routes/puzzles.js";
 
 const app = express();
 const { CORS_ORIGIN, PORT } = process.env;
@@ -10,8 +9,7 @@ const { CORS_ORIGIN, PORT } = process.env;
 app.use(cors({ origin: CORS_ORIGIN }));
 app.use(express.json()); // parses body
 
-app.use("/warehouses", warehousesRoutes);
-app.use("/inventories", inventoriesRoutes);
+app.use("/getChessPuzzle", router);
 
 app.get("/", (req, res) => {
   res.send(

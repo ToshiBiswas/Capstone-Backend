@@ -2,7 +2,7 @@
 
 const knex = require('../db/knex'); // Adjust the path based on your project structure
 
-exports.getRandomPuzzle = async (req, res, next) => {
+const getRandomPuzzle = async (req, res, next) => {
   try {
     // For PostgreSQL use RANDOM(); for MySQL use RAND()
     const puzzle = await knex('puzzles')
@@ -17,3 +17,6 @@ exports.getRandomPuzzle = async (req, res, next) => {
     next(error);
   }
 };
+export {
+  getRandomPuzzle
+}

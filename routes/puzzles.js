@@ -1,12 +1,13 @@
 import express from "express";
-import * as inventoriesController from "../controllers/puzzleController.js";
+import * as puzzleController from "../controllers/puzzleController.js";
 
 // routes/puzzles.js
 
-const express = require('express');
 const router = express.Router();
-const puzzlesController = require('../controllers/puzzlesController');
 
-router.get('/random', puzzlesController.getRandomPuzzle);
+// REMEMBER TO CHANGE THE "PLACEHOLDER" TO THE NAME OF YOUR FUNCTION
+router
+  .route("/")
+  .get(puzzleController.inventories) // GET all inventory items
 
-module.exports = router;
+export default router;
