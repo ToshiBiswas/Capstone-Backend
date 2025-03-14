@@ -1,10 +1,10 @@
-import "dotenv/config";
+require('dotenv').config();
 // Update with your config settings.
 
 /**
  * @type { Object.<string, import("knex").Knex.Config> }
  */
-export default {
+module.exports = {
   client: "mysql2",
   connection: {
     host: process.env.DB_HOST,
@@ -12,4 +12,7 @@ export default {
     user: process.env.DB_USER,
     password: process.env.DB_PASSWORD,
   },
+  migrations: {
+    directory: './migrations'
+  }
 };
