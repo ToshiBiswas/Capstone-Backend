@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
+
+/* Entire page background */
+.menu-screen {
+  background-color: #302e2b;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* Large popup window in the center */
+.popup-window {
+  background-color: #1d1e20;
+  width: 80%;
+  height: 80%;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+}
+
+.menu-logo {
+  max-width: 400px;
+  margin-bottom: 40px;
+}
+
+/* Big Play button with hover effects */
+.play-button {
+  background-color: #ff9800;
+  border: none;
+  padding: 20px 60px;
+  font-size: 2rem;
+  color: #fff;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  font-family: 'Open Sans', sans-serif;
+
+  &:hover {
+    transform: scale(1.05);
+    background-color: #e68900;
+  }
+}
+
+/* Tablet view adjustments */
+@media (max-width: 768px) {
+  .popup-window {
+    width: 90%;
+    height: 70%;
+    padding: 40px;
+  }
+  .menu-logo {
+    max-width: 300px;
+    margin-bottom: 30px;
+  }
+  .play-button {
+    font-size: 1.5rem;
+    padding: 15px 40px;
+  }
+}
+
+/* Mobile view adjustments */
+@media (max-width: 480px) {
+  .popup-window {
+    width: 95%;
+    height: 70%;
+    padding: 30px;
+  }
+  .menu-logo {
+    max-width: 200px;
+    margin-bottom: 20px;
+  }
+  .play-button {
+    font-size: 1.3rem;
+    padding: 12px 30px;
+  }
+}
