@@ -63,7 +63,33 @@
       width: 100px;
     }
   }
-  
+  .next-button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    
+    button {
+      background-color: #ff9800;
+      border: none;
+      color: #f0f0f0;
+      padding: 14px 28px;
+      font-size: 1.3rem;
+      font-weight: bold;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+      
+      &:hover {
+        background-color: #e68900;
+        transform: scale(1.05);
+      }
+      
+      &:active {
+        transform: scale(0.98);
+      }
+    }
+  }
+      
   @media (max-width: 480px) {
     .game-logo {
       width: 80px;
